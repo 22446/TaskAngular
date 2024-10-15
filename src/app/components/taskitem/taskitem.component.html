@@ -1,0 +1,16 @@
+<img class="card-img-top position-relative" 
+     src="../../../assets/images/jeshoots-com-pUAM5hPaCRI-unsplash.jpg" 
+     alt="{{data.title}}" 
+     loading="lazy" 
+     style="width: 100%; height: auto;">
+         <div class="position-absolute pe-2 pt-1 top-0 end-0">
+       <button [ngClass]="data.completed?'btn btn-success':'btn btn-danger'">
+            {{data.completed?'Completed':'Not completed'}}
+       </button>
+         </div>
+         <div>
+         <div class="card-body">
+           <p class="card-text">{{data.title.split(" ",4).join(" ")}}</p>
+         </div>
+     </div>
+ 

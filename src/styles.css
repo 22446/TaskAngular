@@ -1,0 +1,16 @@
+.cr{
+    cursor: pointer;
+}
+.card{
+    overflow: hidden;
+}
+.card img{
+    transition: 1s all;
+}
+.parent{
+    height: 100vh;
+}
+.card:hover img{
+    transform: scale(1.1);
+    transition: 1s all;
+}

@@ -1,0 +1,18 @@
+<div class="parent">
+    <div class="container py-4">
+        <div>
+            <input type="search" class="form-control" [(ngModel)]="title" placeholder="Search for task">
+        </div>
+        <div class="row">
+            @for (item of TasksData.slice(0,12)|search:title; track item.id) {
+            <div class="d-flex  justify-content-center gy-2 col-lg-3  col-md-4  col-12">
+                <div class="card cr" (click)="CompletedOrNOT(item)">
+                    <app-taskitem  [data]="item"></app-taskitem>
+                  </div>
+            </div>
+        }@empty{
+            <h1>There's no task with this title</h1>
+        }
+        </div>
+    </div>
+</div>
